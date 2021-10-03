@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { useEffect, useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 import { Card, Col, Row } from "react-bootstrap";
 import News from "./components/News/News";
 
@@ -15,11 +16,13 @@ function App() {
       .then((data) => setNews(data.articles));
   }, []);
   return (
-    <Row xs={1} md={2} className="g-4">
-      {news.map((nw) => (
-        <News news={nw}></News>
-      ))}
-    </Row>
+    <div className="app">
+      <Row xs={1} md={3} className="g-4">
+        {news.map((nw) => (
+          <News news={nw}></News>
+        ))}
+      </Row>
+    </div>
   );
 }
 

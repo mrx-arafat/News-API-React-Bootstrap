@@ -1,3 +1,4 @@
+import Button from "@restart/ui/esm/Button";
 import React from "react";
 import { Card, Col } from "react-bootstrap";
 
@@ -10,6 +11,7 @@ const News = (props) => {
         <Card.Body>
           <Card.Title>{title}</Card.Title>
           <Card.Text>{description}</Card.Text>
+          <Button variant="btn btn-primary">Click Me</Button>
         </Card.Body>
       </Card>
     </Col>
